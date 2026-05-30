@@ -39,7 +39,7 @@ if st.button("Phân tích"):
             st.error("Không tìm thấy dữ liệu")
             st.stop()
 
-        close = data["Close"]
+        close = data["Close"].squeeze()
 
         rsi = ta.momentum.RSIIndicator(close).rsi().iloc[-1]
 
